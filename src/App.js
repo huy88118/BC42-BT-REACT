@@ -1,9 +1,10 @@
 
+import Home from "./BT-buoi1/Home";
 
 function App() {
   return (
-    <div className="App">
-    
+    <div>
+    <Home/>
     </div>
   );
 }
