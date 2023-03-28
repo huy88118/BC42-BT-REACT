@@ -61,14 +61,14 @@ function Product() {
         `https://63e864225f3e35d898f01fc9.mockapi.io/api/Product/${productId}`
       );
       // Sau khi xoá thành công, dữ liệu chỉ mới thay đổi ở phía server
-      // Cần gọi lại hàm fetchUsers để gọi API lấy danh sách users mới nhất và set lại cho state users
+      // Cần gọi lại hàm fetchProducts để gọi API lấy danh sách products mới nhất và set lại cho state products
       fetchProducts();
     } catch (error) {
       console.log(error);
     }
   };
 
-  // Viết hàm xử lý nhận vào object user, và lưu vào state selectedUser
+  // Viết hàm xử lý nhận vào object product, và lưu vào state selectedProduct
   const handleSelectProduct = (product) => {
     setSelectedProduct(product);
   };
@@ -76,8 +76,8 @@ function Product() {
   // Viết hàm xử lý nhận vào giá trị searchString
   const handleSearch = (searchString) => {
     setSearchByName(searchString);
-    // ?: Khi state searchByEmail thay đổi, ta muốn gọi lại hàm fetchUser
-    // => Đưa state searchByEmail vào array của ú
+    // ?: Khi state searchByName thay đổi, ta muốn gọi lại hàm fetchProduct
+    // => Đưa state searchByName vào array 
   };
 
   useEffect(() => {
